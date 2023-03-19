@@ -1,0 +1,19 @@
+{
+  "name": "discord-breakout-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.15.0",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
