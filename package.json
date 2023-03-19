@@ -1,8 +1,11 @@
 {
   "name": "discord-breakout-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
   "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "node index.mjs",
     "dev": "nodemon index.mjs"
