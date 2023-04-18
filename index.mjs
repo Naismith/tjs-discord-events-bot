@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { Client, Collection, Events, GatewayIntentBits } from "discord.js";
 import { __dirname } from "./meta.mjs";
+import { pathToFileURL } from 'node:url';
 
 config({ path: ".env" });
 
@@ -25,7 +26,8 @@ const commandFiles = fs
 
 for await (const file of commandFiles) {
   const filePath = path.join(commandsPath, file);
-  const command = await import(filePath);
+  const hrefPath = pathToFileURL(filePath).href;
+  const command = await import(hrefPath);
   client.commands.set(command.data.name, command);
 }
 
